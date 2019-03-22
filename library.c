@@ -58,3 +58,19 @@ void ErrorScreen()
     write(STDERR_FILENO, Error, strlen(Error)); //Will write Error message using the length of it as buffer
     exit(1);
 }
+
+int CheckSpace(char *space)
+{
+    int issue=0;
+    for(int i = 0; i< strlen(space); i++)
+    {
+       if(isspace(space[i] == 0)
+          {
+              issue = 1;
+              break;
+          }
+    }
+          return issue;
+ }
+          
+         
