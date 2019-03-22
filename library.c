@@ -61,7 +61,7 @@ void ErrorScreen()
 
 int CheckSpace(char *space)
 {
-    int issue=0;
+    int issue=0; 
     for(int i = 0; i< strlen(space); i++)
     {
        if(isspace(space[i] == 0)
