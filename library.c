@@ -12,6 +12,8 @@ char *path;
 char Error[126] = "Something has gone wrong\n"; //C string array for error message array size of 126
 int ProcessEmpty=0;
 int modify = 0;
+char mutli[256][256];
+int mult = 0;
 
 
 
@@ -84,11 +86,11 @@ int Process(char *argc1[])
         ErrorScreen();
         exit(1);   
     }
-   else if((a==0) && (ProcessEmpty == 0))
+   else if((a==0) && (ProcessEmpty!=1))
        {
            if(modify == 0)
            {
-               path = strdup(
+               path = strdup("/usr/bin/")
                path = strcat(process, argc1[0]);
                if(access(path,X_OK)!=0 && modify==0)
                    {
@@ -96,8 +98,42 @@ int Process(char *argc1[])
                        exit(0);
                    }
            }
-    
-}
+       }
+    else if(modify == 1 && mult == 0)
+    {
+        path = strcat(path, argc1[0]);
+        if(access(path,X_OK)!=0
+           {
+               write(STDERR_FILENO, Error, strlen(Error));
+               exit(0);
+           }
+    } 
+           else
+           {
+               for(int i = 0; i < mult; i++)
+               {
+                  str(multi[i], arcg[0];
+                      if(access(multi[i], X_OK)==0)
+                         {
+                             strcpy(path,multi[i]);
+                             break;
+                         }
+               }
+           }
+                      if(execv(path, arcg1)==-1
+                         {
+                             ErrorScreen();
+                             exit(0);
+                         }
+              }
+                         else
+                         {
+                             int status = 0;
+                         }
+                         return a;
+                         
+ 
+   }
     
               
         
