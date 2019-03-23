@@ -90,7 +90,9 @@ int Process(char *argc1[])
            {
                process = strdup(
                process = strcat(process, argc1[0]);
-               if(
+               if(access(process,X_OK)!=0 && modify==0)
+                   {
+                       
     
 }
     
