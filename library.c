@@ -71,6 +71,17 @@ int CheckSpace(char *space)
           }
     }
           return issue;
- }
+}
           
+int Process(char *argc1[])
+{
+    int a = fork();
+    if(a < 0)
+    {
+        ErrorScreen();
+        exit(1);
+    
+              
+        
+        
          
