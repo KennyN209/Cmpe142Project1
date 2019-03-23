@@ -12,7 +12,7 @@ char *path;
 char Error[126] = "Something has gone wrong\n"; //C string array for error message array size of 126
 int ProcessEmpty=0;
 int modify = 0;
-char *process;
+
 
 
 
@@ -88,11 +88,14 @@ int Process(char *argc1[])
        {
            if(modify == 0)
            {
-               process = strdup(
-               process = strcat(process, argc1[0]);
-               if(access(process,X_OK)!=0 && modify==0)
+               path = strdup(
+               path = strcat(process, argc1[0]);
+               if(access(path,X_OK)!=0 && modify==0)
                    {
-                       
+                       write(STDERR_FILENO, Error, strlen(Error));
+                       exit(0);
+                   }
+           }
     
 }
     
