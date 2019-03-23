@@ -90,8 +90,8 @@ int Process(char *argc1[])
        {
            if(modify == 0)
            {
-               path = strdup("/usr/bin/")
-               path = strcat(process, argc1[0]);
+               path = strdup("/bin/")
+               path = strcat(path, argc1[0]);
                if(access(path,X_OK)!=0 && modify==0)
                    {
                        write(STDERR_FILENO, Error, strlen(Error));
@@ -112,7 +112,7 @@ int Process(char *argc1[])
            {
                for(int i = 0; i < mult; i++)
                {
-                  str(multi[i], arcg[0];
+                  str(multi[i], argc1[0];
                       if(access(multi[i], X_OK)==0)
                          {
                              strcpy(path,multi[i]);
@@ -120,12 +120,11 @@ int Process(char *argc1[])
                          }
                }
            }
-                      if(execv(path, arcg1)==-1
+                      if(execv(path, argc1)==-1
                          {
                              ErrorScreen();
                              exit(0);
                          }
-              }
                          else
                          {
                              int status = 0;
@@ -134,7 +133,34 @@ int Process(char *argc1[])
                          
  
    }
-    
+                         
+                         
+  int Process1(char *space)
+  {
+      int temp = 0;
+      int a;
+      int i;
+      
+      if(strstr(space, ">")!=NULL
+         {
+             i = 0;
+             char* shift[sizeof(char)*256];
+             shift[0] = strtok(strdup(space));
+             while(shift[i]!=NULL)
+             {
+                 i++;
+                 shift[i] = strtok(NULL);
+                 
+             }
+             if(i==1)
+             {
+                 write(STDERR_FILENO, Error, strlen(Error));
+                 exit(0);
+             }
+             int z = 0;
+             char* argc1[sizeof(space)];
+             argc1[0] = strtok(space);
+             
               
         
         
